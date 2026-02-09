@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de bootstrap</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!--IZQUIERDA: LOGO-->
+            <a class="navbar-brand d-flex align-items-center" href="#"> 
+                <i class="fa-brands fa-instagram fa-lg me-2"></i> Instagram
+            </a>
+
+            <!--DERECHA: CONTENDOR DE BOTONES-->
+            <div class="d-flex align-items-center gap-2">
+                <button 
+                    class="btn btn-primary" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#newPostModal">
+                    Create new post 
+                </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+
+                
+        </div>
+    </nav>
+
+    <!--BOTONOES DE VISTAS-->
+    <div class="container mt-4 d-flex justify-content-center gap-2">
+        <button id="gridView" class="btn btn-outline-secondary">
+            <i class="fa-solid fa-table-cells"></i>
+        </button>
+        <button id="listView" class="btn btn-outline-secondary"> 
+            <i class="fa-solid fa-bars"></i> 
+        </button>
+    </div>
+    
+    
+
+    <div class="container mt-4">
+        
+
+        <div class="row justify-content-center"> <!--primera fila de fotos-->
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="d-flex justify-content-between px-3 pt-3"> 
+                        <span class="fw-bold">Perrito</span>
+                        <span class="text-muted">08/21</span>
+                    </div>
+                    <img src="https://picsum.photos/id/237/600/400" class="img-fluid" alt="Post 1">
+                    <div class="card-body">
+                        <h5 class="card-title">2004 likes</h5>
+                        <p  class="card-text">“Un amigo fiel que ilumina cualquier día.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="d-flex justify-content-between px-3 pt-3"> 
+                        <span class="fw-bold">Niebla</span>
+                        <span class="text-muted">09/24</span>
+                    </div>
+                    <img src="https://picsum.photos/id/426/600/400" class="img-fluid" alt="Post 2">
+                    <div class="card-body">
+                        <h5 class="card-title">485 likes</h5>
+                        <p class="card-text">“La magia que aparece cuando el mundo decide esconderse.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="d-flex justify-content-between px-3 pt-3"> 
+                        <span class="fw-bold">Rascacielo</span>
+                        <span class="text-muted">12/24</span>
+                    </div>
+                    <img src="https://picsum.photos/id/500/600/400" class="img-fluid" alt="Post 3">
+                    <div class="card-body">
+                        <h5 class="card-title">10087 likes</h5>
+                        <p class="card-text">“Un gigante de acero tocando el cielo.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row g-4"> <!--segunda fila de fotos-->
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="d-flex justify-content-between px-3 pt-3"> 
+                        <span class="fw-bold">Lineas de tren</span>
+                        <span class="text-muted">01/25</span>
+                    </div>
+                    <img src="https://picsum.photos/id/233/600/400" class="img-fluid" alt="Post 1">
+                    <div class="card-body">
+                        <h5 class="card-title">6012 likes</h5>
+                        <p  class="card-text">“Caminos de acero que llevan historias a lo desconocido.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="d-flex justify-content-between px-3 pt-3"> 
+                        <span class="fw-bold">Playa y arena</span>
+                        <span class="text-muted">02/25</span>
+                    </div>
+                    <img src="https://picsum.photos/id/485/600/400" class="img-fluid" alt="Post 2">
+                    <div class="card-body">
+                        <h5 class="card-title">100001 likes</h5>
+                        <p class="card-text">“Donde el mar susurra y la arena guarda secretos.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="d-flex justify-content-between px-3 pt-3"> 
+                        <span class="fw-bold">Montaña nevada</span>
+                        <span class="text-muted">03/25</span>
+                    </div>
+                    <img src="https://picsum.photos/id/256/600/400" class="img-fluid" alt="Post 3">
+                    <div class="card-body">
+                        <h5 class="card-title">3614 likes</h5>
+                        <p class="card-text">“Silencio blanco donde la naturaleza respira grandeza.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row g-4"> <!--Tercera fila de fotos-->
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="d-flex justify-content-between px-3 pt-3"> 
+                        <span class="fw-bold">Carros antiguos</span>
+                        <span class="text-muted">04/25</span>
+                    </div>
+                    <img src="https://picsum.photos/id/133/600/400" class="img-fluid" alt="Post 1">
+                    <div class="card-body">
+                        <h5 class="card-title">4826 likes</h5>
+                        <p  class="card-text">“Historia sobre ruedas que nunca pierde su encanto.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="d-flex justify-content-between px-3 pt-3"> 
+                        <span class="fw-bold">Agua y mar</span>
+                        <span class="text-muted">06/25</span>
+                    </div>
+                    <img src="https://picsum.photos/id/385/600/400" class="img-fluid" alt="Post 2">
+                    <div class="card-body">
+                        <h5 class="card-title">3621 likes</h5>
+                        <p class="card-text">“El movimiento eterno donde el mar encuentra su calma.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 col-md-4">
+                <div class="card">
+                    <div class="d-flex justify-content-between px-3 pt-3"> 
+                        <span class="fw-bold">Casas antiguas</span>
+                        <span class="text-muted">08/25</span>
+                    </div>
+                    <img src="https://picsum.photos/id/188/600/400" class="img-fluid" alt="Post 3">
+                    <div class="card-body">
+                        <h5 class="card-title">1028 likes</h5>
+                        <p class="card-text">“Muros que guardan historias que el tiempo no pudo borrar.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="modal" id="newPostModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control mb-3" placeholder="Write your caption here..."></textarea>
+                    <div class="d-flex gap-3"> 
+                        <i class="fa-solid fa-camera fa-lg"></i> 
+                        <i class="fa-solid fa-location-dot fa-lg"></i> 
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--CAMBIO DE CUADRICULA A LINEA DE LAS FOTOS-->
+    <script>
+        const gridBtn = document.getElementById("gridView"); 
+        const listBtn = document.getElementById("listView");
+
+        gridBtn.addEventListener("click", () => { 
+            document.querySelectorAll(".row > div").forEach(col => {
+                 col.classList.add("col-md-4");
+             });
+             document.querySelectorAll(".card").forEach(card => {
+                card.classList.remove("list-view-card"); 
+            });
+             document.querySelectorAll(".card-img-top").forEach(img => {
+                img.classList.remove("list-view-img");
+             });
+        });
+
+    
+
+         listBtn.addEventListener("click", () => {
+            document.querySelectorAll(".row > div").forEach(col => {
+                col.classList.remove("col-md-4");
+            });
+            document.querySelectorAll(".card").forEach(card => {
+                card.classList.add("list-view-card");
+            });
+            document.querySelectorAll(".card-body").forEach(body => {
+                body.style.display = "block";
+            });
+            document.querySelectorAll(".card-img-top").forEach(img => {
+                img.classList.add("list-view-img");
+            });
+        });
+    </script>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
